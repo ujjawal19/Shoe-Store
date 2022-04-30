@@ -1,0 +1,40 @@
+{
+  "shoes": [
+    {
+      "id": 1,
+      "name": "puma",
+      "description": "Hello",
+      "category": "sneaker",
+      "img":"",
+      "price": 3000,
+      "size": 10
+    },
+    {
+      "id": 2,
+      "name": "Nike",
+      "description": "Hello",
+      "category": "sneaker",
+      "img":"",
+      "price": 4000,
+      "size": 10
+    },
+    {
+      "id": 3,
+      "name": "Sketchers",
+      "description": "Hello",
+      "category": "sneaker",
+      "img":"",
+      "price": 7000,
+      "size": 9
+    },
+    {
+      "id": 4,
+      "name": "Abibas",
+      "description": "Hello",
+      "category": "sneaker",
+      "img":"",
+      "price": 400,
+      "size": 10
+    }
+  ]
+}
