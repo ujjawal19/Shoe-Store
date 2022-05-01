@@ -6,7 +6,6 @@ import ShoeCards from './components/ShoeCards';
 
 function App() {
 
-
   return (
     <div className='App'>
       <NavBar />
@@ -15,7 +14,6 @@ function App() {
           <SideBar/>
         </div>
         <div className='content-container'>
-
           <ShoeCards />
         </div>
       </div>

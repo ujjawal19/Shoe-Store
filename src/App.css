@@ -1,16 +1,20 @@
 .main-container{
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 72px);
 }
 
+.nav-container{
+  background-color: rgb(160 160 160);
+}
 
 .sidebar-container{
-  min-width:15%;
-  background-color: rgb(165 165 165);
+  min-width:20%;
+  box-shadow: -2px -13px 12px 5px #36c9b3;
 }
 
 .content-container{
-  min-width:85%;
+  min-width:80%;
+  overflow-y: auto;
 }
 
 .cards {
@@ -26,4 +30,7 @@
   margin: 1rem .25em;
   max-width: 300px;
 
+}
+.filter-container{
+  height: 50%;
 }

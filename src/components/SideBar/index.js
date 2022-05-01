@@ -1,9 +1,14 @@
 import React from 'react'
+import Filters from '../Filters'
 
 function SideBar() {
-  return (
-    <div>SideBar</div>
-  )
+
+
+    return (
+        <div>
+            <Filters />
+        </div>
+    )
 }
 
 export default SideBar

@@ -29,11 +29,11 @@
     },
     {
       "id": 4,
-      "name": "Abibas",
+      "name": "Adidas",
       "description": "Hello",
       "category": "sneaker",
       "img":"",
-      "price": 400,
+      "price": 40000,
       "size": 10
     }
   ]

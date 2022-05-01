@@ -2,10 +2,10 @@ import React from 'react'
 
 function NavBar() {
     return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav className="navbar nav-container" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" >
-                    App Name
+                    Sneak a Peak
                 </a>
 
                 <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -22,15 +22,18 @@ function NavBar() {
                         Home
                     </a>
                 </div>
-
+            <div>
+            </div>
                 
 
                 <div className="navbar-end">
                     <div className="navbar-item">
+                    <input className="input is-rounded my-2" type="text" placeholder="Enter Shoes Name"/>
                         <div className="buttons">
                             <a className="button is-primary">
-                                <strong>Add New Shoe</strong>
+                                <strong>Add Shoes</strong>
                             </a>
+                            
                         </div>
                     </div>
                 </div>
