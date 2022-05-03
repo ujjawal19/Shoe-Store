@@ -1,4 +1,5 @@
 import React from 'react'
+import AddShoes from '../AddShoes'
 
 function NavBar() {
     return (
@@ -30,8 +31,8 @@ function NavBar() {
                     <div className="navbar-item">
                     <input className="input is-rounded my-2" type="text" placeholder="Enter Shoes Name"/>
                         <div className="buttons">
-                            <a className="button is-primary">
-                                <strong>Add Shoes</strong>
+                            <a >
+                                <strong><AddShoes/></strong>
                             </a>
                             
                         </div>

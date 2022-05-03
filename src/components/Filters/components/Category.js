@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
 
-function Category({setCategory}) {
+function Category({setCategory,category}) {
 
 
     const handleCheckbox = (e) => {
         if (e.target.checked === true) {
             console.log(e.target.name);
-            setCategory(e.target.name);
+            setCategory([...category,e.target.name]);
         }
-        
+        else{
+
+            var array = [category]; // make a separate copy of the array
+            var index = array.indexOf(e.target.name)
+            if (index !== -1) {
+              array.splice(index, 1);
+              setCategory({category: array});
+            }
+        }
+        console.log(category);
     }
-    // categories.forEach((category)=>{
-    //     console.log(category);
-    // })
     return (
         <div className='is-flex is-flex-direction-column px-4'>
             <div className='title'>
@@ -36,9 +42,6 @@ function Category({setCategory}) {
                 <input type="checkbox" name="Sports Shoes" onChange={(e) => { handleCheckbox(e) }} />
                 <span className='p-2 '>Sports Shoes</span>
             </label>
-            <div>
-                {/* {categories.map(name => <h2>{name}</h2>)} */}
-            </div>
 
         </div>
     )

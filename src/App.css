@@ -4,7 +4,9 @@
 }
 
 .nav-container{
-  background-color: rgb(160 160 160);
+  /* background-color: rgb(160 160 160); */
+  box-shadow: -2px -13px 12px 5px #36c9b3;
+
 }
 
 .sidebar-container{
@@ -34,3 +36,56 @@
 .filter-container{
   height: 50%;
 }
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 5;
+  bottom: 5;
+  margin: auto; 
+   width: 25%;
+  /* right: 15px; */
+  left: 690px;
+  border: 3px solid blue;
+  z-index: 9;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  /* max-width: 300px; */
+  padding: 10px;
+  background-color: white;
+  
+}
+
+/* Full-width input fields */
+.form-container input button{
+  /* width: 100%; */
+  float: right;
+  /* align-items: center; */
+  padding: 15px;
+  top: 0;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+/* .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+} */
+
+/* Set a style for the submit/login button */
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+Add some hover effects to buttons
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
