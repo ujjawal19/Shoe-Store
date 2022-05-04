@@ -1,15 +1,16 @@
-import React,{useState} from 'react'
+import React from 'react'
 import AddShoes from '../AddShoes'
 
-function NavBar() {
+function NavBar({setSearch}) {
 
     
     const handleSearch = (e) =>{
+        setSearch(e.target.value);
     }
     return (
         <nav className="navbar nav-container" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item" >
+                <a className="navbar-item is-text-bold is-size-4" >
                     Sneak a Peak
                 </a>
 
@@ -30,10 +31,7 @@ function NavBar() {
                 <div className="navbar-end">
                     <div className="navbar-item">
                         <div className="buttons">
-                            <a >
-                                <strong><AddShoes/></strong>
-                            </a>
-                            
+                                <AddShoes/>
                         </div>
                     </div>
                 </div>

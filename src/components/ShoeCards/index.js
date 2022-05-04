@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 
 
-function ShoeCards({filters}) {
+function ShoeCards({filters,search}) {
 
     let location = useLocation();
     console.log({location});;
@@ -17,29 +17,21 @@ function ShoeCards({filters}) {
     console.log({query});
     // console.log(query.get("category"));
     // console.log(window.location.href);
-    const [search, setSearch] = useState({
-        category: [],
-        price: 0,
-        size:0
-    });
 
-    console.log({filters});
+    const fetchShoes = async (filters,search) => {
+        const size = filters?.sizeFilter ? filters?.sizeFilter : null;
+        const category =filters?.categoryFilter ? filters?.categoryFilter : null;
+        const price = filters?.priceFilter? filters?.priceFilter: null;
+        const _search = search? search: null;
 
-    const fetchShoes = async (filters) => {
-        const size =filters?.sizeFilter;
-        const category =(filters?.categoryFilter);
-        const price = (filters?.priceFilter)
-        console.log({filters,size});
-        const { data } = await axios.get(baseURL,{params:{size:size,price:price}});
+        const { data } = await axios.get(baseURL,{params:{size:size,price_lte:price,category:category,q:_search}});
         setProduct(data);
     };
     
     useEffect(() => {
-        fetchShoes(filters);
-    }, [filters]);
-    
-    console.log({product});
-    // console.log();
+        fetchShoes(filters,search);
+    }, [filters,search]);
+
     return (
         <div className='cards'>
             {

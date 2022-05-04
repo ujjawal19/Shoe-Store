@@ -40,12 +40,10 @@
 .form-popup {
   display: none;
   position: fixed;
-  top: 5;
-  bottom: 5;
   margin: auto; 
-   width: 25%;
-  /* right: 15px; */
-  left: 690px;
+  width: 340px;
+  top: 10%;
+  left:45%;
   border: 3px solid blue;
   z-index: 9;
 }
@@ -121,4 +119,8 @@
 
 .filterwhite{
   color: beige;
+}
+
+hr{
+  margin: 0.5rem;
 }

@@ -35,11 +35,12 @@ const AddShoes = () => {
     }
     const handleOpenForm = () => {
         document.getElementById("myForm").style.display = "block";
-        
+        document.getElementById("content-container").style.overflow = "hidden"; 
     }
 
     const handleClose = () => {
         document.getElementById("myForm").style.display = "none";
+        document.getElementById("content-container").style.overflow = "";
 
     }
     const handleSubmit = (e) => {
