@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Category({setCategory,category}) {
 
@@ -9,22 +9,19 @@ function Category({setCategory,category}) {
             setCategory([...category,e.target.name]);
         }
         else{
-
-            var array = [category]; // make a separate copy of the array
-            var index = array.indexOf(e.target.name)
-            if (index !== -1) {
-              array.splice(index, 1);
-              setCategory({category: array});
-            }
-        }
-        console.log(category);
+            console.log("Removed category "+ e.target.name);
+            //Remove the value from state when checkbox is empty
+            setCategory(category.filter((catg)=>{
+                return catg !== e.target.name;
+            }));
+        }   
     }
     return (
-        <div className='is-flex is-flex-direction-column px-4'>
+        <div className='is-flex is-flex-direction-column px-4 combine'>
             <div className='title'>
-                <span className='p-2 '>Category</span>
+                <span className='p-2 filterwhite'>Category</span>
             </div>
-            <label className='my-1 checkbox'>
+            <label className='my-1 checkbox '>
                 <input type="checkbox" name='Sneakers' onChange={(e) => { handleCheckbox(e) }} />
                 <span className='p-2 '>Sneakers</span>
             </label>
@@ -42,7 +39,7 @@ function Category({setCategory,category}) {
                 <input type="checkbox" name="Sports Shoes" onChange={(e) => { handleCheckbox(e) }} />
                 <span className='p-2 '>Sports Shoes</span>
             </label>
-
+          
         </div>
     )
 }

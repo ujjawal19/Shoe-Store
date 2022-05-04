@@ -7,7 +7,7 @@ import Filters from './components/Filters';
 
 function App() {
 
-const [filters, setFilters] = useState({})
+const [filters, setFilters] = useState({});
   return (
     <div className='App'>
       <NavBar />

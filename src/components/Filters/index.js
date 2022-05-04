@@ -24,13 +24,16 @@ function Filters(props) {
             priceFilter: price
         })
 
-        // console.log({search});
     }
+    console.log(category);
     const handleReset = (e) =>{
         e.preventDefault();
-        setCategory([]);
-        setPrice(0);
-        setSize(0);
+        setFilters({
+            categoryFilter: [],
+            sizeFilter: 0,
+            priceFilter: 0
+        });
+        history.push('');
 
     }
 
@@ -41,12 +44,15 @@ function Filters(props) {
                 <div className='category-container'>
                     <Category setCategory={setCategory} category={category} handleReset={handleReset} />
                 </div>
+                <br></br>
                 <div className='size-container'>
                     <Price setPrice={setPrice} />
                 </div>
+                <br></br>
                 <div className='price-container'>
                     <Size setSize={setSize} />
                 </div>
+                <br></br>
                 <div>
                     <button className="button is-primary is-outlined m-2">Apply Filter</button>
                     <button onClick ={(e) => handleReset(e)} className="button is-danger is-outlined m-2">Reset</button>

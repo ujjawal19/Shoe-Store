@@ -3,25 +3,22 @@ import React, { useState } from 'react';
 
 
 const AddShoes = () => {
-
     const [items, setItems] = useState({
-        id: 0,
         name: "",
-        category: "",
-        img: "",
+        category: "Loafers",
+        img:"" ,
         description: "",
         price: 0,
         size: 0
 
     });
     const handleInput = (e) => {
-        if (e.target.name === 'Id')
-            setItems({...items,  id: e.target.value })
-
+        if(e.target.localName === 'select')
+            console.log(e.target.value);
         if (e.target.name === 'Name')
             setItems({...items,  name: e.target.value })
 
-        if (e.target.name === 'Category')
+        if (e.target.localName === 'select')
             setItems({...items,  category: e.target.value })
 
         if (e.target.name === 'Description')
@@ -47,24 +44,20 @@ const AddShoes = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        // if(items.name != "" && items.category!=="" && items.price !=="" && items.price !== "" && items.size!== "")
-        axios.post("http://localhost:3000/shoes",items);
+        axios.post("http://localhost:3000/shoes",items).then((response)=>{
+            console.log(response);
+        }).catch((e)=>{
+            console.log(e.response);
+        });
         console.log({items});
+        handleClose();
     }
-    // console.log(items);
 
     return (
         <div>
             <button class="button is-success open-button" onClick={handleOpenForm} >AddShoes</button>
             <div className="form-popup" id="myForm">
                 <form className='form-container' onSubmit={(e) => handleSubmit(e)}>
-                    <div className="field">
-                        <label className="label">Id</label>
-                        <div className="control">
-                            <input className="input" name="Id" onChange={(e) => { handleInput(e) }} type="number" placeholder="Enter the Id" value={items.id} required />
-                        </div>
-                    </div>
-
                     <div className="field">
                         <label className="label">Name</label>
                         <div className="control">
@@ -77,10 +70,10 @@ const AddShoes = () => {
                         <div className="control">
                             <div className="select" name="Category" value={items.category} onChange={(e) => { handleInput(e) }}>
                                 <select>
-                                    <option>Sneakers</option>
-                                    <option>Loafers</option>
-                                    <option>Boots</option>
-                                    <option>Sports Shoes</option>
+                                    <option  value="Sneakers">Sneakers</option>
+                                    <option selected value="Loafers">Loafers</option>
+                                    <option value="Boots">Boots</option>
+                                    <option value="Sports Shoes">Sports Shoes</option>
                                 </select>
                             </div>
                         </div>

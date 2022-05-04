@@ -84,8 +84,41 @@
   background-color: red;
 }
 
-Add some hover effects to buttons
+/*Add some hover effects to buttons*/
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+/* margin between category and price*/
+/* .candp{
+  display: "flex";
+  justify-content: "space-between";
+} */
 
+/* Input shoe Search position*/
+
+.searchshoe{
+  max-width: 600px;
+  left: 13%;
+}
+
+
+
+.showprice{
+  display: block;
+  /* max-width: 30px; */
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  /* background-color:lavender; */
+}
+.combine{
+  color: white;
+  border: 1px solid black;
+  max-width: fit-content;
+  padding: 2px 5px;
+  background-color: darkcyan;
+}
+
+.filterwhite{
+  color: beige;
+}

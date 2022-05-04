@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Cards({ id, data }) {
+function Cards({ data }) {
     return (
         <div className="card">
             <div className="card-image">
@@ -21,11 +21,11 @@ function Cards({ id, data }) {
                     </div>
                 </div>
 
-                <div style={{ display: "flex", justifyContent: "space-between" }} className="content">
+                <div style={{ display: "flex", justifyContent: "space-between"}} className="content" >
                     <p>
-                    {data.category}
+                    <strong>{data.category}</strong>
                     </p>
-                    <p>RS.&nbsp;{data.price}
+                    <p><strong>RS.&nbsp;{data.price}</strong>
                     </p>
                 </div>
             </div>

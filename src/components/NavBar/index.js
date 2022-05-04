@@ -1,7 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import AddShoes from '../AddShoes'
 
 function NavBar() {
+
+    
+    const handleSearch = (e) =>{
+    }
     return (
         <nav className="navbar nav-container" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -17,19 +21,14 @@ function NavBar() {
             </div>
 
             <div id="navbarBasicExample" className="navbar-menu is-active">
+            <input className="searchshoe input is-rounded input-focus-box-shadow-color my-2 mx-6 " type="text" placeholder="Search Shoe" onChange={(e) => handleSearch(e)} />
 
-                <div className="navbar-start">
-                    <a className="navbar-item">
-                        Home
-                    </a>
-                </div>
             <div>
             </div>
                 
 
                 <div className="navbar-end">
                     <div className="navbar-item">
-                    <input className="input is-rounded my-2" type="text" placeholder="Enter Shoes Name"/>
                         <div className="buttons">
                             <a >
                                 <strong><AddShoes/></strong>
