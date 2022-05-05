@@ -15,7 +15,8 @@ function Category({setCategory,category}) {
                 <span>Category</span>
                 <hr></hr>
             </div>
-            <label className='my-1 radio pl-3 is-size-5'>
+
+            <label className='my-1 radio pl-3 is-size-5 catgalign'>
                 <input type="radio" name="category" value="Sneakers" checked ={category === 'Sneakers'} onChange={(e) => { handleRadioButton(e) }} />
                 <span className='p-2'>Sneakers</span>
             </label>

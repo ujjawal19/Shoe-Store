@@ -1,20 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import AddShoes from '../AddShoes'
 
 function NavBar({setSearch}) {
 
-    
+    const [isActive, setisActive] = React.useState(false);
     const handleSearch = (e) =>{
         setSearch(e.target.value);
     }
     return (
-        <nav className="navbar nav-container" role="navigation" aria-label="main navigation">
+        <nav className="navbar nav-container" id="my-nav" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item is-text-bold is-size-4" >
+                <a onClick={()=>{
+                    setisActive(!isActive);
+                }}  
+                role="button"
+                className="navbar-item is-text-bold is-size-4 "  >
                     Sneak a Peak
                 </a>
 
-                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" id="burger" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -40,4 +44,4 @@ function NavBar({setSearch}) {
     )
 }
 
-export default NavBar
+export default NavBar;

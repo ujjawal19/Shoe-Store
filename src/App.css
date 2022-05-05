@@ -109,18 +109,18 @@
   border: none;
   /* background-color:lavender; */
 }
-.combine{
-  color: white;
-  border: 1px solid black;
-  max-width: fit-content;
-  padding: 2px 5px;
-  background-color: darkcyan;
+
+.catgalign{
+  margin-left: 0.5em;
 }
 
-.filterwhite{
-  color: beige;
+.description{
+  text-align:center;
+  font-size: 15px; 
+  font-style: italic; 
 }
 
-hr{
-  margin: 0.5rem;
+.one-line{
+  display: flex;
+  justify-content: space-between
 }

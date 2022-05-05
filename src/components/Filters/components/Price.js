@@ -13,7 +13,7 @@ function Price({setPrice,price}) {
             <hr></hr>
             </div>
             <span className='showprice'>{price}</span>
-        <input className="slider is-fullwidth is-warning" step="1000" min="0" max="100000" type="range" value={price} onChange={(e)=>{handlePrice(e)}}/>
+        <input className="slider is-fullwidth is-warning" step="1000" min="0" max="10000" type="range" value={price} onChange={(e)=>{handlePrice(e)}}/>
         
     </div>
   )

@@ -20,14 +20,17 @@ function Cards({ data }) {
                         <p className="subtitle is-6">size&nbsp; {data.size}</p>
                     </div>
                 </div>
-
-                <div style={{ display: "flex", justifyContent: "space-between"}} className="content" >
+                
+                <div className='media-center description'>{data.description}</div>
+               <br></br>
+                <div  className="content one-line" >
                     <p>
                     <strong>{data.category}</strong>
                     </p>
                     <p><strong>RS.&nbsp;{data.price}</strong>
                     </p>
                 </div>
+                
             </div>
         </div>
     )
