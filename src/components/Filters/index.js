@@ -4,9 +4,8 @@ import Category from './components/Category'
 import Price from './components/Price'
 import Size from './components/Size'
 
-function Filters({setFilters, search}) {
+function Filters({setFilters, search,setOpenFilters}) {
 
-    console.log({search});
     const [category, setCategory] = useState("");
 
     const [price, setPrice] = useState(0);
@@ -22,9 +21,10 @@ function Filters({setFilters, search}) {
             sizeFilter: size,
             priceFilter: price
         })
+        setOpenFilters(false)
 
     }
-    console.log(category);
+    
     const handleReset = (e) =>{
         e.preventDefault();
         setCategory();
@@ -37,10 +37,9 @@ function Filters({setFilters, search}) {
             searchFilter:""
         });
         history.push('');
+        setOpenFilters(false)
     }
 
-    
-    console.log({size})
     return (
         <form onSubmit={(e)=> handleSubmit(e)} className="filter">
             <div className='m-4 has-background-white filter-container'>

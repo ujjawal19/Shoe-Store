@@ -9,21 +9,17 @@ import queryString from 'query-string';
 function ShoeCards({filters,search}) {
 
     let location = useLocation();
-    console.log({location});;
     const [product, setProduct] = useState([]);
  
     const baseURL = 'http://localhost:3000/shoes/';
     const query = queryString.parse(location.search);
-    console.log({query});
-    // console.log(query.get("category"));
-    // console.log(window.location.href);
+
 
     const fetchShoes = async (filters,search) => {
         const size = filters?.sizeFilter ? filters?.sizeFilter : null;
         const category =filters?.categoryFilter ? filters?.categoryFilter : null;
         const price = filters?.priceFilter? filters?.priceFilter: null;
         const _search = search? search: null;
-
         const { data } = await axios.get(baseURL,{params:{size:size,price_lte:price,category:category,q:_search}});
         setProduct(data);
     };

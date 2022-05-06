@@ -4,7 +4,6 @@
 }
 
 .nav-container{
-  /* background-color: rgb(160 160 160); */
   box-shadow: -2px -13px 12px 5px #36c9b3;
 
 }
@@ -45,19 +44,15 @@
 }
 
 
-/* Add styles to the form container */
+
 .form-container {
-  /* max-width: 300px; */
   padding: 10px;
   background-color: white;
   
 }
 
-/* Full-width input fields */
 .form-container input button{
-  /* width: 100%; */
   float: right;
-  /* align-items: center; */
   padding: 15px;
   top: 0;
   margin: 5px 0 22px 0;
@@ -65,15 +60,6 @@
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
-/* .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-} */
-
-/* Set a style for the submit/login button */
-
-/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
 }
@@ -93,12 +79,14 @@
 }
 @media screen and (min-width: 280px) and (max-width: 1024px){
   .searchshoe{
-    max-width: 130px;
+    max-width: 90%;
     left: 0%;
   }
+  .sidebar-container{
+    min-width:100%;
+    box-shadow: -2px -13px 12px 5px #36c9b3;
+  }
 }
-
-
 .catgalign{
   margin-left: 0.5em;
 }

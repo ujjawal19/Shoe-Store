@@ -13,14 +13,11 @@ const AddShoes = () => {
 
     });
     const handleInput = (e) => {
-        
-        if (e.target.name === 'Name') {
-            var letters = /^[A-Za-z]+$/;
+        var letters =/^[A-Za-z]+$/
+        if (e.target.name === 'Name') 
             e.target.value.match(letters) ?  setItems({ ...items, name: e.target.value }) : alert("Enter the Name in alphabets only ") 
 
-        }
         if (e.target.localName === 'select')
-
             setItems({ ...items, category: e.target.value })
 
         if (e.target.name === 'Description')
@@ -39,10 +36,9 @@ const AddShoes = () => {
             else
                 setItems({ ...items, size: e.target.value });
         }
+
         if (e.target.name === 'Image')
-        {
             setItems({ ...items, img: e.target.value });
-        }
             
     }
     const handleOpenForm = () => {

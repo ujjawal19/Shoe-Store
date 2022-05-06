@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import AddShoes from '../AddShoes'
 
-function NavBar({ setSearch }) {
+function NavBar({ setSearch, setOpenFilters, isMobile }) {
 
     const [isActive, setisActive] = React.useState(false);
     const handleSearch = (e) => {
@@ -13,14 +13,17 @@ function NavBar({ setSearch }) {
         myNav.classList.toggle("is-active");
         burger.classList.toggle("is-active");
     }
+    const onFilters = () => {
+        setOpenFilters(prev => !prev)
+    }
     return (
-    <nav className="navbar nav-container"role="navigation" aria-label="main navigation">
+        <nav className="navbar nav-container" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a onClick={()=>{
+                <a onClick={() => {
                     setisActive(!isActive);
-                }}  
-                role="button"
-                className="navbar-item is-text-bold is-size-4 "  >
+                }}
+                    role="button"
+                    className="navbar-item is-text-bold is-size-4 "  >
                     Sneak a Peak
                 </a>
 
@@ -31,16 +34,17 @@ function NavBar({ setSearch }) {
                 </a>
             </div>
 
-            <div  id="my-nav"   className="navbar-menu is-active navbar-end">
-            <div><input className="searchshoe input is-rounded input-focus-box-shadow-color my-2 mx-2" type="text" placeholder="Search Shoe" onChange={(e) => handleSearch(e)} /></div>
-
-                
+            <div id="my-nav" className="navbar-menu  navbar-end">
+                <div><input className="searchshoe input is-rounded input-focus-box-shadow-color my-2 mx-2" type="text" placeholder="Search Shoe" onChange={(e) => handleSearch(e)} /></div>
 
                 <div className="navbar-end">
-                    <div className="navbar-item">
-                        <div className="buttons">
-                                <AddShoes/>
+                    <div className="navbar-item is-flex">
+                        <div className="mx-1">
+                            <AddShoes />
                         </div>
+                        {{ isMobile } && <div className="mx-1">
+                            <button className="button is-primary" onClick={onFilters}>Filters</button>
+                        </div>}
                     </div>
                 </div>
             </div>
