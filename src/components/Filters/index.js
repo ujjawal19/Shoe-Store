@@ -1,10 +1,10 @@
-import React,{useState,useEffect} from 'react'    
+import React, { useState } from 'react'
 import { useHistory } from "react-router-dom";
 import Category from './components/Category'
 import Price from './components/Price'
 import Size from './components/Size'
 
-function Filters({setFilters, search,setOpenFilters}) {
+function Filters({ setFilters, search, setOpenFilters }) {
 
     const [category, setCategory] = useState("");
 
@@ -24,8 +24,8 @@ function Filters({setFilters, search,setOpenFilters}) {
         setOpenFilters(false)
 
     }
-    
-    const handleReset = (e) =>{
+
+    const handleReset = (e) => {
         e.preventDefault();
         setCategory();
         setPrice(0);
@@ -34,14 +34,14 @@ function Filters({setFilters, search,setOpenFilters}) {
             categoryFilter: "",
             sizeFilter: 0,
             priceFilter: 0,
-            searchFilter:""
+            searchFilter: ""
         });
         history.push('');
         setOpenFilters(false)
     }
 
     return (
-        <form onSubmit={(e)=> handleSubmit(e)} className="filter">
+        <form onSubmit={(e) => handleSubmit(e)} className="filter">
             <div className='m-4 has-background-white filter-container'>
                 <div className='category-container'>
                     <Category setCategory={setCategory} category={category} handleReset={handleReset} />
@@ -57,7 +57,7 @@ function Filters({setFilters, search,setOpenFilters}) {
                 <br></br>
                 <div>
                     <button className="button is-primary is-outlined m-3">Apply Filter</button>
-                    <button onClick ={(e) => handleReset(e)} className="button is-danger is-outlined m-3">Reset</button>
+                    <button onClick={(e) => handleReset(e)} className="button is-danger is-outlined m-3">Reset</button>
                 </div>
             </div>
         </form>

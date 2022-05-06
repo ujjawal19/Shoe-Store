@@ -1,20 +1,20 @@
-.main-container{
+.main-container {
   display: flex;
   height: calc(100vh - 72px);
 }
 
-.nav-container{
+.nav-container {
   box-shadow: -2px -13px 12px 5px #36c9b3;
 
 }
 
-.sidebar-container{
-  min-width:20%;
+.sidebar-container {
+  min-width: 20%;
   box-shadow: -2px -13px 12px 5px #36c9b3;
 }
 
-.content-container{
-  min-width:80%;
+.content-container {
+  min-width: 80%;
   overflow-y: auto;
 }
 
@@ -30,28 +30,26 @@
   box-sizing: border-box;
   margin: 1rem .25em;
   max-width: 300px;
-
 }
+
 .form-popup {
   display: none;
   position: fixed;
-  margin: auto; 
+  margin: auto;
   width: 340px;
   top: 10%;
-  left:45%;
-  border: 3px solid blue;
+  left: 45%;
+  border: 3px solid #000;
   z-index: 9;
 }
-
-
 
 .form-container {
   padding: 10px;
   background-color: white;
-  
+
 }
 
-.form-container input button{
+.form-container input button {
   float: right;
   padding: 15px;
   top: 0;
@@ -65,38 +63,58 @@
 }
 
 /*Add some hover effects to buttons*/
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
-.filter-container{
+.filter-container {
   height: 50%;
 }
 
-.searchshoe{
+.searchshoe {
   max-width: 600px;
   left: 28%;
 }
-@media screen and (min-width: 280px) and (max-width: 1024px){
-  .searchshoe{
+
+@media screen and (min-width: 280px) and (max-width: 1024px) {
+  .searchshoe {
     max-width: 90%;
     left: 0%;
   }
-  .sidebar-container{
-    min-width:100%;
+
+  .sidebar-container {
+    min-width: 100%;
     box-shadow: -2px -13px 12px 5px #36c9b3;
   }
+
 }
-.catgalign{
+@media screen and (min-width: 280px) and (max-width: 767px) {
+
+  .form-popup {
+    display: none;
+    position: fixed;
+    margin: auto;
+    width: 70%;
+    top: 10%;
+    left: 15%;
+    border: 3px solid #000;
+    z-index: 9;
+  }
+}
+
+
+.catgalign {
   margin-left: 0.5em;
 }
 
-.description{
-  text-align:center;
-  font-size: 15px; 
-  font-style: italic; 
+.description {
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
 }
-.one-line{
+
+.one-line {
   display: flex;
   justify-content: space-between
 }

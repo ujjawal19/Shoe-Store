@@ -163,13 +163,22 @@
       "id": 19
     },
     {
-      "name": "Puma",
-      "category": "Boots",
-      "img": "C:\\fakepath\\shoe9.jpg",
-      "description": "Flexibility",
-      "price": "asdasdad",
-      "size": "6",
-      "id": 20
+      "name": "Nike",
+      "category": "Loafers",
+      "img": "http://localhost:3000/assets/shoe4.jpg",
+      "description": "Resolve Street Men's Running Shoes",
+      "price": "999",
+      "size": "8",
+      "id": 22
+    },
+    {
+      "name": "adidas",
+      "category": "Sports Shoes",
+      "img": "http://localhost:3000/assets/shoe5.jpg",
+      "description": "Men's Flex Fire V1 Idp Sneaker",
+      "price": "2999",
+      "size": "9",
+      "id": 23
     }
   ]
 }

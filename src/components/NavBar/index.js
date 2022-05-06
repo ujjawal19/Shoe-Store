@@ -42,7 +42,7 @@ function NavBar({ setSearch, setOpenFilters, isMobile }) {
                         <div className="mx-1">
                             <AddShoes />
                         </div>
-                        {{ isMobile } && <div className="mx-1">
+                        {isMobile && <div className="mx-1">
                             <button className="button is-primary" onClick={onFilters}>Filters</button>
                         </div>}
                     </div>
