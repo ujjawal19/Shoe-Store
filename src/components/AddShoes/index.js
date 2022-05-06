@@ -13,9 +13,10 @@ const AddShoes = () => {
 
     });
     const handleInput = (e) => {
-        // const re = '/^[A-Za-z]+$/';
+        
         if (e.target.name === 'Name') {
-            isNaN(e.target.value) ?  setItems({ ...items, name: e.target.value }) :alert("Enter the Name in correct format") 
+            var letters = /^[A-Za-z]+$/;
+            e.target.value.match(letters) ?  setItems({ ...items, name: e.target.value }) : alert("Enter the Name in alphabets only ") 
 
         }
         if (e.target.localName === 'select')
@@ -39,7 +40,10 @@ const AddShoes = () => {
                 setItems({ ...items, size: e.target.value });
         }
         if (e.target.name === 'Image')
+        {
             setItems({ ...items, img: e.target.value });
+        }
+            
     }
     const handleOpenForm = () => {
         document.getElementById("myForm").style.display = "block";
@@ -66,7 +70,6 @@ const AddShoes = () => {
         }).catch((e) => {
             console.log(e.response);
         });
-        console.log({ items });
         handleClose();
     }
 

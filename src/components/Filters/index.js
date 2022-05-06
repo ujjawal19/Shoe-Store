@@ -7,7 +7,6 @@ import Size from './components/Size'
 function Filters({setFilters, search}) {
 
     console.log({search});
-    // const {filter} = props;
     const [category, setCategory] = useState("");
 
     const [price, setPrice] = useState(0);
@@ -43,7 +42,7 @@ function Filters({setFilters, search}) {
     
     console.log({size})
     return (
-        <form onSubmit={(e)=> handleSubmit(e)}>
+        <form onSubmit={(e)=> handleSubmit(e)} className="filter">
             <div className='m-4 has-background-white filter-container'>
                 <div className='category-container'>
                     <Category setCategory={setCategory} category={category} handleReset={handleReset} />

@@ -33,10 +33,6 @@
   max-width: 300px;
 
 }
-.filter-container{
-  height: 50%;
-}
-
 .form-popup {
   display: none;
   position: fixed;
@@ -86,29 +82,22 @@
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-/* margin between category and price*/
-/* .candp{
-  display: "flex";
-  justify-content: "space-between";
-} */
 
-/* Input shoe Search position*/
+.filter-container{
+  height: 50%;
+}
 
 .searchshoe{
   max-width: 600px;
-  left: 13%;
+  left: 28%;
+}
+@media screen and (min-width: 280px) and (max-width: 1024px){
+  .searchshoe{
+    max-width: 130px;
+    left: 0%;
+  }
 }
 
-
-
-.showprice{
-  display: block;
-  /* max-width: 30px; */
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
-  /* background-color:lavender; */
-}
 
 .catgalign{
   margin-left: 0.5em;
@@ -119,7 +108,6 @@
   font-size: 15px; 
   font-style: italic; 
 }
-
 .one-line{
   display: flex;
   justify-content: space-between
