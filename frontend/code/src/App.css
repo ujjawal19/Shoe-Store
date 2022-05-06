@@ -73,13 +73,13 @@
 }
 
 .searchshoe {
-  max-width: 600px;
+  width: 600px;
   left: 28%;
 }
 
 @media screen and (min-width: 280px) and (max-width: 1024px) {
   .searchshoe {
-    max-width: 90%;
+    width: 90%;
     left: 0%;
   }
 

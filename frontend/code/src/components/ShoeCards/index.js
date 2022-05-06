@@ -6,10 +6,9 @@ import { useLocation } from 'react-router-dom';
 
 function ShoeCards({ filters, search }) {
 
-    let location = useLocation();
     const [product, setProduct] = useState([]);
 
-    const baseURL = 'http://localhost:3000/shoes/';
+    const baseURL = 'http://localhost:3004/shoes/';
 
 
     const fetchShoes = async (filters, search) => {
@@ -25,16 +24,25 @@ function ShoeCards({ filters, search }) {
         fetchShoes(filters, search);
     }, [filters, search]);
 
-    return (
-        <div className='cards'>
-            {
-                product.map((item) => {
-                    return (
-                        <Cards data={item} />)
-                })
-            }
+    if(product.length !== 0){
+        return (
+            <div className='cards'>
+                {
+                    product.map((item) => {
+                        return (
+                            <Cards data={item} />)
+                    })
+                }
+            </div>
+        )
+    }
+    else{
+        return (
+        <div className='m-5 p-5'>
+            You have no product matching that filter
         </div>
-    )
+        )
+    }
 }
 
 export default ShoeCards

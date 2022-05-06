@@ -63,7 +63,7 @@ const AddShoes = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3000/shoes", items).then((response) => {
+        axios.post("http://localhost:3004/shoes", items).then((response) => {
             console.log(response);
         }).catch((e) => {
             console.log(e.response);
@@ -73,7 +73,7 @@ const AddShoes = () => {
 
     return (
         <div>
-            <button className="button is-success open-button" onClick={handleOpenForm} >Add Shoes</button>
+            <button className="button is-primary open-button" onClick={handleOpenForm} >Add Shoes</button>
             <div className="form-popup" id="myForm">
                 <form className='form-container' onSubmit={(e) => handleSubmit(e)}>
                     <div className="field">
